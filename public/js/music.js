@@ -18,14 +18,12 @@ musicPlayer.setup = function(wav) {
 
 musicPlayer.play = function(wav) {
   return function (){
-    console.log(this);
     var $playButton = $('#' + wav);
     var mySound = soundManager.createSound({
       id: wav,
       url: '/wavs/' + wav + '.wav'
     });
     mySound.play();
-    console.log(this);
     $('#title').addClass('bulge_title');
     $('.' + wav + '_35').attr('class', 'playing_fade ' + wav + '_35');
     setTimeout(function() {
