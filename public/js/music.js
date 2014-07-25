@@ -26,9 +26,11 @@ musicPlayer.play = function(wav) {
     });
     mySound.play();
     console.log(this);
+    $('#title').addClass('bulge_title');
     $('.' + wav + '_35').attr('class', 'playing_fade ' + wav + '_35');
     setTimeout(function() {
       $('.' + wav + '_35').attr('class', 'resting ' + wav + '_35');
+      $('#title').removeClass('bulge_title');
     }, 350);
 
     // var startLight = 100;

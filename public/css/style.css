@@ -1,5 +1,5 @@
 body {
-  font-family: 'Bangers', cursive;
+  font-family: 'Bangers', Helvetica, 'sans serif';
   position: relative;
   background-color: #FFD72C;
 }
@@ -26,13 +26,7 @@ h1 {
   margin: 6px;
 }
 
-/* For SVG Triangles */
-
-@-webkit-keyframes color_transition {
-  0%, 100% {fill: #3A30FF;}
-  3%, 70% {fill: #A330FF;}
-  50% {fill: #FFA9F1;}
-}
+/* Animation when page loads*/
 
 @-webkit-keyframes fill_transition {
   0%, 100% {fill: #3A30FF;}
@@ -40,17 +34,112 @@ h1 {
   50% {fill: #FFA9F1;}
 }
 
+@-moz-keyframes fill_transition {
+  0%, 100% {fill: #3A30FF;}
+  20%, 80% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@-o-keyframes fill_transition {
+  0%, 100% {fill: #3A30FF;}
+  20%, 80% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@keyframes fill_transition {
+  0%, 100% {fill: #3A30FF;}
+  20%, 80% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+/* Animation when wav plays */
+
+@-webkit-keyframes color_transition {
+  0%, 100% {fill: #3A30FF;}
+  3%, 70% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@-moz-keyframes color_transition {
+  0%, 100% {fill: #3A30FF;}
+  3%, 70% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@-o-keyframes color_transition {
+  0%, 100% {fill: #3A30FF;}
+  3%, 70% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@keyframes color_transition {
+  0%, 100% {fill: #3A30FF;}
+  3%, 70% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
 .initial_transition {
   fill: #3A30FF;
   -webkit-animation-name: fill_transition;
   -webkit-animation-duration: 1800ms;
-  -webkit-animatiion-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: fill_transition;
+  -moz-animation-duration: 1800ms;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-name: fill_transition;
+  -o-animation-duration: 1800ms;
+  -o-animation-timing-function: ease-in-out;
+  animation-name: fill_transition;
+  animation-duration: 1800ms;
+  animation-timing-function: ease-in-out;
 }
 
 .playing_fade {
   -webkit-animation: color_transition 370ms;
+  -moz-animation: color_transition 370ms;
+  -o-animation: color_transition 370ms;
+  animation: color_transition 370ms;
 }
 
 .resting {
   fill: #3A30FF;
+}
+
+@-webkit-keyframes bulge {
+  0%, 100% {font-size: 100px;}
+  20%, 80% {font-size: 120px;}
+  50% {font-size: 150px;}
+}
+
+@-moz-keyframes bulge {
+  0%, 100% {font-size: 100px;}
+  20%, 80% {font-size: 120px;}
+  50% {font-size: 150px;}
+}
+
+@-o-keyframes bulge {
+  0%, 100% {font-size: 100px;}
+  20%, 80% {font-size: 120px;}
+  50% {font-size: 150px;}
+}
+
+@keyframes bulge {
+  0%, 100% {font-size: 100px;}
+  20%, 80% {font-size: 120px;}
+  50% {font-size: 150px;}
+}
+
+.bulge_title {
+  -webkit-animation-name: bulge;
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: bulge;
+  -moz-animation-duration: 400ms;
+  -moz-animation-timing-function: linear;
+  -o-animation-name: bulge;
+  -o-animation-duration: 400ms;
+  -o-animation-timing-function: linear;
+  animation-name: bulge;
+  animation-duration: 400ms;
+  animation-timing-function: linear;
 }
