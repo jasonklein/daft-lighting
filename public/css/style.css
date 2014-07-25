@@ -17,7 +17,7 @@ h1 {
   width: 600px;
   margin: 50px auto 0 auto;
   border-radius: 50%;
-  background: radial-gradient(#C8C9C7, #9FA19E, #585958);
+  background: radial-gradient(#C8C9C7, #9FA19E, #585958 85%);
 }
 
 .control_button {
