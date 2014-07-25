@@ -1,0 +1,56 @@
+body {
+  font-family: 'Bangers', cursive;
+  position: relative;
+  background-color: #FFD72C;
+}
+
+h1 {
+  margin: 250px auto 0 34%;
+  position: absolute;
+  font-size: 100px;
+  opacity: .7;
+  z-index: 9999;
+}
+
+#player {
+  height: 600px;
+  width: 600px;
+  margin: 50px auto 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(#C8C9C7, #9FA19E, #585958);
+}
+
+.control_button {
+  color: #3A30FF;
+  display: inline-block;
+  margin: 6px;
+}
+
+/* For SVG Triangles */
+
+@-webkit-keyframes color_transition {
+  0%, 100% {fill: #3A30FF;}
+  3%, 70% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+@-webkit-keyframes fill_transition {
+  0%, 100% {fill: #3A30FF;}
+  20%, 80% {fill: #A330FF;}
+  50% {fill: #FFA9F1;}
+}
+
+.initial_transition {
+  fill: #3A30FF;
+  -webkit-animation-name: fill_transition;
+  -webkit-animation-duration: 1800ms;
+  -webkit-animatiion-timing-function: ease-in-out;
+}
+
+.playing_fade {
+  -webkit-animation: color_transition 370ms;
+}
+
+.resting {
+  fill: #3A30FF;
+}
