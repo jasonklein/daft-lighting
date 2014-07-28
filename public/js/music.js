@@ -21,7 +21,8 @@ musicPlayer.play = function(wav) {
     var $playButton = $('#' + wav);
     var mySound = soundManager.createSound({
       id: wav,
-      url: '/wavs/' + wav + '.wav'
+      url: '/wavs/' + wav + '.wav',
+      type: 'audio/wav'
     });
     mySound.play();
     $('#title').addClass('bulge_title');
